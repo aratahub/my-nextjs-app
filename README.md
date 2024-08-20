@@ -1,3 +1,27 @@
+作成手順 : 
+create-next-app@latest my-next-app で作成。
+
+追加内容 : 
+pm2 で実行する用に ecosystem.config.js を追加。
+
+ecosystem.config.js　の中身 : 
+// script にて next.js のスタートアップスクリプトが入っているパスを指定している。
+module.exports = {
+    apps: [
+      {
+        name: 'my-next-app',
+        script: 'node_modules/next/dist/bin/next',
+        args: 'start -p 3000',
+        env: {
+          NODE_ENV: 'production'
+        }
+      }
+    ]
+  };
+  
+
+
+//既定のメッセージ
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
