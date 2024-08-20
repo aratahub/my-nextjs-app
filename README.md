@@ -1,10 +1,10 @@
-作成手順 : 
+## 作成手順  
 create-next-app@latest my-next-app で作成。
 
-追加内容 : 
+## 追加内容  
 pm2 で実行する用に ecosystem.config.js を追加。
 
-ecosystem.config.js　の中身 : 
+## ecosystem.config.js　の中身 
 // script にて next.js のスタートアップスクリプトが入っているパスを指定している。
 module.exports = {
     apps: [
